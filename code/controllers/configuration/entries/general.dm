@@ -350,3 +350,5 @@
 
 /// Gives the ability to send players a maptext popup.
 /datum/config_entry/flag/popup_admin_pm
+
+/datum/config_entry/flag/toast_notification_on_init
