@@ -176,7 +176,7 @@
 	var/combinedqualitymax = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/2 + itemqualitymax //Makes sure that better smiths can make better items, even with a worse anvil. Encourages actually levelling up, instead of meta-rushing antag gear
 	if(!artifactrolled)
 		artifactchance = (1+(user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/4))/1500 //Reduced from 2500 temporarily. Should help that percentage get above 1% on the RAND()
-		//artifactrolled = TRUE --Disabled because this is a shitty mechanic.
+		artifactrolled = TRUE
 	var/artifact = max(prob(artifactchance), debug)
 	var/finalfailchance = outrightfailchance
 	if(user.mind.skill_holder)
@@ -203,7 +203,7 @@
 			if(artifact)
 				to_chat(user, "It is an artifact, a creation whose legacy shall live on forevermore.") //todo: SSblackbox
 				currentquality = max(currentquality, 2)
-				finisheditem.quality = currentquality * 3 //This isn't actually that good due to the nonlinear scale of your armor pen.
+				finisheditem.quality = currentquality * 2 //This isn't actually that good due to the nonlinear scale of your armor pen.
 				finisheditem.artifact = TRUE
 			else
 				if(combinedqualitymax >= 0)
