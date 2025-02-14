@@ -137,6 +137,7 @@
 	icon_state = "arousal0"
 	icon = 'icons/obj/genitals/hud.dmi'
 	screen_loc = ui_arousal
+	mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/arousal/Initialize(mapload, mob/living/carbon/human/owner)
 	. = ..()
