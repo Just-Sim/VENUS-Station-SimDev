@@ -82,7 +82,9 @@
 								/obj/item/seeds/telriis,
 								/obj/item/seeds/thaadra,
 								/obj/item/seeds/vale,
-								/obj/item/seeds/vaporsac
+								/obj/item/seeds/vaporsac,
+								/obj/item/seeds/matrigrass,
+								/obj/item/seeds/sanguintare
 								))
 
 		new seed(get_turf(user))
